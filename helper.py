@@ -23,7 +23,7 @@ class XModel(tf.keras.Model):
             raise TypeError(f"Invalid optimizer type: {type(optimizer).__name__}. "
                             f"Please provide a valid TensorFlow optimizer instance.")
 
-        super(XModel, self).compile(optimizer=optimizer)
+        super(XModel, self).compile(optimizer=optimizer, loss="mae")
         # self.optimizer = optimizer
         self.loss_fn = loss_fn
 
